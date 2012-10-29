@@ -1,0 +1,58 @@
+#!/bin/zsh
+
+# There are five startup files that zsh will read commands from:
+# 
+# $ZDOTDIR/.zshenv
+# $ZDOTDIR/.zprofile
+# $ZDOTDIR/.zshrc
+# $ZDOTDIR/.zlogin
+# $ZDOTDIR/.zlogout
+# 
+# If ZDOTDIR is not set, then the value of HOME is used; this is the usual case.
+# 
+# '.zshenv' is sourced on all invocations of the shell, unless the -f option is 
+# set. It should contain commands to set the command search path, plus other 
+# important environment variables. '.zshenv' should not contain commands that 
+# produce output or assume the shell is attached to a tty.
+# 
+# '.zshrc' is sourced in interactive shells. It should contain commands to set 
+# up aliases, functions, options, key bindings, etc.
+# 
+# '.zlogin' is sourced in login shells. It should contain commands that should 
+# be executed only in login shells. '.zlogout' is sourced when login shells 
+# exit. '.zprofile' is similar to '.zlogin', except that it is sourced before 
+# '.zshrc'. '.zprofile' is meant as an alternative to '.zlogin' for ksh fans; 
+# the two are not intended to be used together, although this could certainly 
+# be done if desired. '.zlogin' is not the place for alias definitions, 
+# options, environment variable settings, etc.; as a general rule, it should 
+# not change the shell environment at all. Rather, it should be used to set the 
+# terminal type and run a series of external commands (fortune, msgs, etc).
+# 
+# Source: http://zsh.sourceforge.net/Intro/intro_3.html
+
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=$HOME/Projects
+
+# Make vim the default editor
+export EDITOR=vim
+
+# Zsh history
+export HISTFILE=$HOME/.zsh_history             # History file location
+export HISTSIZE=10000                          # Size of history (default = 500)
+export SAVEHIST=$HISTSIZE
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups                  # Ignore duplicates
+export HISTIGNORE='ls:ls *:cd:cd -:pwd;exit:date:* --help' # Commands to ignore
+
+# Highlight section titles in manual pages
+# Less Colors for Man Pages
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
