@@ -4,9 +4,7 @@
 box_name() { [ -f $HOME/.box-name ] && cat $HOME/.box-name || hostname -s }
 
 # Create a new directory and enter it
-md() {
-	mkdir -p "$@" && cd "$@"
-}
+md() { mkdir -p "$@" && cd "$@" }
 
 # Use Git’s colored diff when available
 # hash git &>/dev/null
@@ -30,9 +28,7 @@ function httpcompression() {
 }
 
 # Gzip-enabled `curl`
-function gurl() {
-	curl -sH "Accept-Encoding: gzip" "$@" | gunzip
-}
+function gurl() { curl -sH "Accept-Encoding: gzip" "$@" | gunzip }
 
 # Syntax-highlight JSON strings or files
 function json() {

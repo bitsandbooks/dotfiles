@@ -15,7 +15,7 @@ fi
 
 # Other simple aliases
 alias ll='ls -lah'
-alias lsd='ls -l | grep "^d"' # List only directories
+alias lsd='ls -lah | grep "^d"' # List only directories
 alias cls=clear
 alias hist='fc -l 1'
 alias more=less
@@ -28,11 +28,12 @@ alias sl=ls # I still do this ALL the time
 alias curl='curl --progress-bar'
 alias ffx='open -a Firefox'
 alias firefox='open -a Firefox'
-alias gem='$HOME/bin/gem'
-alias git='/usr/local/bin/git'
+# alias gem='$HOME/.rvm/bin/gem'
+# alias git='/usr/local/bin/git'
 alias mate='open -a TextMate'
 alias markdown='/usr/local/bin/markdown'
-alias python='/usr/local/bin/python'
-alias ruby='$HOME/.rvm/bin/ruby'
+# alias python='/usr/local/bin/python'
+# alias ruby='$HOME/.rvm/bin/ruby'
 alias tc='open -a TrueCrypt'
-alias wget='/usr/local/bin/wget --progress=bar'
+alias wget='wget --progress=bar'
+alias brewup='brew update && brew install `brew outdated`; brew cleanup'

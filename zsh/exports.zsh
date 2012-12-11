@@ -1,4 +1,5 @@
-export PATH='~/bin:/usr/local/bin:/usr/local/share/python:$PATH:$HOME/.rvm/bin:.'
+#default PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:.
 
 # export GEM_HOME='/usr/local/Cellar/ruby/gems'
 # export GEM_PATH='/usr/local/Cellar/ruby/gems/gems'
