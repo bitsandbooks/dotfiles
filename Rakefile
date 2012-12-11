@@ -1,3 +1,7 @@
+# This awesome rakefile has been blatantly stolen with all the love in the 
+# world, mind you) from Zach Holman's dotfiles.
+# https://github.com/holman/dotfiles
+
 require 'rake'
 
 desc "Hook our dotfiles into system-standard positions."
