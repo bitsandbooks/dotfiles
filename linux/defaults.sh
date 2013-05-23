@@ -1,3 +1,3 @@
 #!/bin/zsh
-source ./aliases.sh
+source $ZSH/$OS/aliases.sh
 
