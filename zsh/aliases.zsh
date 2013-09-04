@@ -8,9 +8,9 @@ alias ...='cd ../..'
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
-	alias ls='command ls -G'
+	alias ls='command ls -GH'
 else
-	alias ls='command ls --color'
+	alias ls='ls -H --color'
 fi
 
 # Other simple aliases

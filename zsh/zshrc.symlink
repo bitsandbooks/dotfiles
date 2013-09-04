@@ -72,6 +72,6 @@ fi
 
 # Set the prompt.
 export PROMPT='
-%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} 
+%{$fg[magenta]%}%n@%m%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} 
 %# '
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
