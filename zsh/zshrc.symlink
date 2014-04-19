@@ -3,6 +3,9 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
+# Display welcome message.
+source $ZSH/zsh/welcome.zsh
+
 # your project folder that we can `c [tab]` to
 export PROJECTS=$HOME/Projects
 
@@ -68,10 +71,12 @@ fi
 
 # NOTE: This originally came from zlogin.
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
 # Set the prompt.
 export PROMPT='
 %{$fg[magenta]%}%n@%m%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} 
 %# '
 
+
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

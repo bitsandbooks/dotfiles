@@ -144,3 +144,6 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 # Allow installing Chrome user scripts via GitHub or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
+
+# Enable use of third-party Time Capsule disks.
+defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1

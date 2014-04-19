@@ -10,7 +10,7 @@ alias ...='cd ../..'
 if [[ "$OSTYPE" =~ ^darwin ]]; then
 	alias ls='command ls -GH'
 else
-	alias ls='ls -H --color'
+	alias ls='ls -H --color=auto'
 fi
 
 # Other simple aliases
