@@ -18,3 +18,23 @@
 
 // Color used to indicate something. Such as when mouse is over a link.
 //@indicatedColor: blue;
+
+@fontSize: 14pt;
+@inkColor: hsl(hue(red), saturation(red), 50%);
+@paperColor: mix(black, white, 90%);
+@deskColor: mix(black, white, 90%);
+@indicatedColor: @inkColor;
+@selectionBackgroundColor: mix(@textColor, @paperColor, 20%);
+@focusedSelectionBackgroundColor: mix(@textColor, @paperColor, 25%);
+@codeblockBackgroundColor: fadeout(@textColor, 85%);
+
+::-webkit-scrollbar {
+  width:15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: mix(@textColor, @paperColor, 25%);
+  border: 3px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
