@@ -9,3 +9,4 @@ export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbi
 
 # Set $Vim folder.
 export VIM=$ZSH/vim
+
