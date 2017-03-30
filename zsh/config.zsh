@@ -25,3 +25,9 @@ setopt HIST_REDUCE_BLANKS
 setopt complete_aliases
 
 zle -N newtab
+
+# Key bindings
+
+# enable history search using ^R
+bindkey '^R' history-incremental-search-backward
+

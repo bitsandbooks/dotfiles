@@ -14,6 +14,7 @@ else
 fi
 
 # Other simple aliases
+alias less='less -X' # don't clear screen when less exits
 alias ll='ls -lah'
 alias lll='ls -lah | less -r'
 alias lsd='ls -lah | grep "^d"' # List only directories
@@ -27,7 +28,4 @@ alias showpath="echo $PATH | tr ':' '\n'"
 
 # Aliases related to apps
 alias curl='curl --progress-bar'
-alias markdown='/usr/local/bin/markdown'
-alias mdown=markdown
 alias wget='wget --progress=bar'
-

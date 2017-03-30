@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Set the prompt.
+export PS1="\n\[\033[38;5;9m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;15m\] in \[$(tput sgr0)\]\[\033[38;5;10m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n\\$\[$(tput sgr0)\] "
+
 # shortcut to this dotfiles path is $bash
 export BASH=$HOME/.dotfiles/bash
 
@@ -7,7 +10,7 @@ export BASH=$HOME/.dotfiles/bash
 source $BASH/welcome.sh
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=$HOME/Projects
+export PROJECTS=$HOME/projects
 
 # Make vim the default editor
 export EDITOR=vim
@@ -34,7 +37,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # source other .sh files
 source $BASH/aliases.sh
-source $BASH/exports.bash
+source $BASH/exports.sh
 # source $BASH/functions.bash
 
 # load every completion after autocomplete loads
@@ -44,23 +47,16 @@ source $BASH/exports.bash
 # Run OS-specific defaults.
 if [ `uname` = "Darwin" ]; then
   export OS='osx'
+  source $HOME/.dotfiles/osx/init.sh
 elif [ `uname` = "Linux" ]; then
   export OS='linux'
-else 
+else
   export OS='unknown'
 fi
-if [ "$OS" != unknown ]; then 
+if [ "$OS" != unknown ]; then
   source $BASH/../$OS/defaults.sh
 fi
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 source $HOME/.localrc
-
-# Set the prompt.
-export PS1="
-\[\e[35m\]\u\[\e[m\]\[\e[35m\]@\[\e[m\]\[\e[35m\]\h\[\e[m\] in \[\e[32m\]\w\[\e[m\]
-\\$ "
-
-
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

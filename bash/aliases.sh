@@ -30,4 +30,3 @@ alias curl='curl --progress-bar'
 alias markdown='/usr/local/bin/markdown'
 alias mdown=markdown
 alias wget='wget --progress=bar'
-

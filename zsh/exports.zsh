@@ -1,5 +1,5 @@
 #default PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:.
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:.
 
 # export GEM_HOME='/usr/local/Cellar/ruby/gems'
 # export GEM_PATH='/usr/local/Cellar/ruby/gems/gems'
@@ -9,4 +9,3 @@ export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbi
 
 # Set $Vim folder.
 export VIM=$ZSH/vim
-

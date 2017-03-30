@@ -46,6 +46,8 @@ source $ZSH/zsh/functions.zsh
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
+autoload bashcompinit
+bashcompinit
 
 # load every completion after autocomplete loads
 # for config_file ($ZSH/**/completion.zsh) do source $config_file; done
@@ -54,12 +56,14 @@ compinit
 # Run OS-specific defaults.
 if [ `uname` = "Darwin" ]; then
   export OS='osx'
+  fpath=(/usr/local/share/zsh-completions $fpath)
+  source $ZSH/osx/init.sh
 elif [ `uname` = "Linux" ]; then
   export OS='linux'
-else 
+else
   export OS='unknown'
 fi
-if [ "$OS" != unknown ]; then 
+if [ "$OS" != unknown ]; then
   source $ZSH/$OS/defaults.sh
 fi
 
@@ -71,15 +75,12 @@ fi
 
 # NOTE: This originally came from zlogin.
 # Load RVM into a shell session *as a function*
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Rbenv.
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Set the prompt.
 export PROMPT='
-%{$fg[magenta]%}%n@%m%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} 
+%{$fg[magenta]%}%n@%m%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}
 %# '
-
-
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
