@@ -46,8 +46,8 @@ source $ZSH/zsh/functions.zsh
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
-autoload bashcompinit
-bashcompinit
+# autoload -U bashcompinit
+# bashcompinit
 
 # load every completion after autocomplete loads
 # for config_file ($ZSH/**/completion.zsh) do source $config_file; done
