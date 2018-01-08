@@ -7,7 +7,7 @@
 # Zach's original idea (and a couple settings) were grabbed from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
-# Run ./defaults.zsh and you'll be good to go.
+# Run ./setdefaults.sh and you'll be good to go.
 
 # Show the ~/Library folder.
 chflags nohidden ~/Library

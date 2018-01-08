@@ -1,16 +1,14 @@
-# Reload .zshrc
-#alias reload!='. ~/.zshrc'
+#!/bin/sh
 
 # Easier navigation
 alias ..='cd ..'
 alias ...='cd ../..'
-#alias --='cd -'
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
-	alias ls='command ls -GH'
+    alias ls='command ls -GH'
 else
-	alias ls='ls -H --color=auto'
+    alias ls='ls --color=auto --human-readable --dereference-command-line'
 fi
 
 # Other simple aliases
@@ -21,8 +19,7 @@ alias lsd='ls -lah | grep "^d"' # List only directories
 alias lld=lsd
 alias cls=clear
 alias hist='fc -l 1'
-alias more=less
-alias moar=less # for the lulz
+alias moar='less -X' # for the lulz
 alias sl=ls # I still do this ALL the time
 alias showpath="echo $PATH | tr ':' '\n'"
 

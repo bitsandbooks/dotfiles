@@ -1,4 +1,7 @@
-#!/usr/bin/env sh
+#!/bin/sh
+
+# Set $ANSIBLE_CONFIG
+export ANSIBLE_CONFIG=/srv/ansible/ansible.cfg
 
 # boot2docker
 export DOCKER_CERT_PATH=/Users/rob/.boot2docker/certs/boot2docker-vm

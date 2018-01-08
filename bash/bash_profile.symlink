@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# If .bashrc exists, run it.
-[[ -r ~/.bashrc ]] && . ~/.bashrc
