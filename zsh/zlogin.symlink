@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # '.zlogin' is sourced in login shells. It should contain commands that should 
 # be executed only in login shells. '.zlogin' is not the place for alias 
@@ -8,4 +8,4 @@
 # etc).
 
 # Display welcome message.
-source $HOME/.dotfiles/sh-welcome.sh
+source $DOTFILES/sh/welcome.sh

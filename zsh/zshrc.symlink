@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # There are five startup files that zsh will read commands from:
 # 
@@ -30,20 +30,22 @@
 # 
 # Source: http://zsh.sourceforge.net/Intro/intro_3.html
 
+export DOTFILES="$HOME/.dotfiles"
+
 # set $OS variable
 if [ `uname` = "Darwin" ]; then
-  export OS='macos'
+  export OS="macos"
 elif [ `uname` = "Linux" ]; then
-  export OS='linux'
+  export OS="linux"
 else
-  export OS='unknown'
+  export OS="unknown"
 fi
 
 ### ALIASES
 
 # import platform- and shell-agnostic aliases, then set zsh-specific aliases
-source "$HOME/.dotfiles/$OS-aliases.sh"
-source "$HOME/.dotfiles/sh-aliases.sh"
+source $DOTFILES/$OS/aliases.sh
+source $DOTFILES/sh/aliases.sh
 alias reloadzsh="source $HOME/.zshrc"
 
 ### FUNCTIONS
@@ -89,12 +91,6 @@ function codepoint() {
 
 ### OPTIONS
 
-# use .localrc for SUPER SECRET CRAP that you don't
-# want in your public, versioned repo.
-if [[ -a $HOME/.localrc ]]; then
-    source $HOME/.localrc
-fi
-
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
@@ -112,26 +108,22 @@ zstyle ':completion:*' insert-tab pending
 autoload colors && colors
 
 # Zsh options
-setopt NO_BG_NICE # don't nice background tasks
-setopt NO_HUP
-setopt NO_LIST_BEEP
-setopt LOCAL_OPTIONS # allow functions to have local options
-setopt LOCAL_TRAPS # allow functions to have local traps
-setopt HIST_VERIFY
-setopt SHARE_HISTORY # share history between sessions ???
-setopt EXTENDED_HISTORY # add timestamps to history
-setopt PROMPT_SUBST
-setopt CORRECT
-setopt COMPLETE_IN_WORD
-setopt IGNORE_EOF
-setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
-setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
-setopt HIST_REDUCE_BLANKS
-
-# don't expand aliases _before_ completion has finished
-#   like: git comm-[tab]
-setopt complete_aliases
+setopt APPEND_HISTORY            # Adds history
+setopt COMPLETE_ALIASES          # Don't expand aliases _before_ completion has finished
+setopt CORRECT                   # Turns on spelling correction for commands
+setopt COMPLETE_IN_WORD          # Set cursor to the end of the word if completion is started
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+setopt INC_APPEND_HISTORY.       # adds history incrementally and share it across sessions
+setopt PROMPT_SUBST              # Subject prompt string to expansion
+setopt SHARE_HISTORY             # Share history between all sessions.
 
 zle -N newtab
 
@@ -139,3 +131,9 @@ zle -N newtab
 
 # enable history search using ^R
 bindkey '^R' history-incremental-search-backward
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -f $HOME/.localrc ]]; then
+    source $HOME/.localrc
+fi

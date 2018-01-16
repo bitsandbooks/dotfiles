@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # Sets reasonable OS X defaults.
 #
 # Lovingly ripped off from Zach Holman's dotfiles.

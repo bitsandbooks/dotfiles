@@ -1,24 +1,27 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+export DOTFILES="$HOME/.dotfiles"
 
 # set $OS variable
 if [ `uname` = "Darwin" ]; then
-  export OS='macos'
+  export OS="macos"
 elif [ `uname` = "Linux" ]; then
-  export OS='linux'
+  export OS="linux"
 else
-  export OS='unknown'
+  export OS="unknown"
 fi
+
 
 ### ALIASES
 
 # import platform- and shell-neutral aliases, then set bash-specific aliases
-source "$HOME/.dotfiles/$OS-aliases.sh"
-source "$HOME/.dotfiles/sh-aliases.sh"
+source $DOTFILES/$OS/aliases.sh
+source $DOTFILES/sh/aliases.sh
 alias reloadbash="source $HOME/.bashrc"
 
 # import platform- and shell-neutral environment variables
-source $HOME/.dotfiles/$OS-vars.sh
-source $HOME/.dotfiles/bash-vars.sh
+source $DOTFILES/$OS/vars.sh
+source $DOTFILES/bash/vars.sh
 
 ### FUNCTIONS
 
@@ -38,7 +41,7 @@ complete -cf sudo
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
-if [[ -a $HOME/.localrc ]]; then
+if [[ -f $HOME/.localrc ]]; then
   source $HOME/.localrc
 fi
 
