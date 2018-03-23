@@ -1,4 +1,3 @@
 #!/usr/bin/env sh
-
-# Disable systemctl's automatic pager
-export SYSTEMD_PAGER=''
+export LESS="-Fiqs"
+export SYSTEMD_PAGER='' # Disable systemctl's automatic pager

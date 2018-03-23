@@ -10,6 +10,7 @@ source $HOME/.dotfiles/sh/vars.sh
 
 # shell-specific vars
 export HISTFILE=$HOME/.zsh_history # History file location
+export SAVEHIST=500
 
 # Set the prompt.
 precmd() { echo "\n" }

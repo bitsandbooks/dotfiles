@@ -113,7 +113,6 @@ setopt COMPLETE_ALIASES          # Don't expand aliases _before_ completion has 
 setopt CORRECT                   # Turns on spelling correction for commands
 setopt COMPLETE_IN_WORD          # Set cursor to the end of the word if completion is started
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
-setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
@@ -131,6 +130,11 @@ zle -N newtab
 
 # enable history search using ^R
 bindkey '^R' history-incremental-search-backward
+
+# source zsh-syntax-highlighting
+if [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
