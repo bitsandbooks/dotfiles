@@ -19,3 +19,5 @@ alias path="echo $PATH | tr ':' '\n'"
 alias curl='curl --progress-bar'
 alias wget='wget --progress=bar'
 alias django='python3 ./manage.py'
+alias py2=python2
+alias py3=python3
