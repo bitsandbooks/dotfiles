@@ -4,7 +4,7 @@ export PROJECTS="$HOME/projects"
 export EDITOR="vim"
 export VISUAL="$EDITOR"
 export VIM="$HOME/.dotfiles/vim"
-export PATH="$HOME/bin:/usr/local/bin:/opt/bin:/usr/bin:/bin:/usr/sbin:/sbin:."
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:/opt/bin:/usr/bin:/bin:/usr/sbin:/sbin:."
 
 # history file
 export HISTSIZE=1000 # Size of history (default = 500)
