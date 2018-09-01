@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export EDITOR="vim"
-export LESS="-FiJMNqsXx8"
+export LESS="-FiJMNqRsXx8"
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:/opt/bin:/usr/bin:/bin:/usr/sbin:/sbin:."
 export PROJECTS="$HOME/projects"
 export VISUAL="$EDITOR"
