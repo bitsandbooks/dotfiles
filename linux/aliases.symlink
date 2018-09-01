@@ -1,0 +1,2 @@
+#!/bin/sh
+alias bootplz="if [ -f /run/reboot-required ]; then; echo 'reboot required'; fi"
