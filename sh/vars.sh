@@ -2,7 +2,7 @@
 
 export EDITOR="vim"
 export LESS="-FiJMNqRsXx8"
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:/opt/bin:/usr/bin:/bin:/usr/sbin:/sbin:."
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/opt/make/libexec/gnubin:/usr/local/bin:/opt/bin:/usr/bin:/bin:/usr/sbin:/sbin:."
 export PROJECTS="$HOME/projects"
 export VISUAL="$EDITOR"
 export VIM="$HOME/.dotfiles/vim"
