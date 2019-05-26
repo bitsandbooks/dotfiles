@@ -21,3 +21,5 @@ alias wget='wget --progress=bar'
 alias django='python3 ./manage.py'
 alias py2=python2
 alias py3=python3
+alias alint=ansible-lint
+alias aplay=ansible-playbook
