@@ -14,5 +14,5 @@ export SAVEHIST=500
 
 # Set the prompt.
 precmd() { echo "\n" }
-export PROMPT='%{$fg[magenta]%}%n@%m%{$reset_color%} %# '
-export RPROMPT='in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}'
+export PROMPT='%F{green}${PWD/#$HOME/~}%f %# '
+export RPROMPT='%F{green}%n@%m%f'
