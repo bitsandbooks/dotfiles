@@ -136,3 +136,8 @@ if [[ -o interactive ]]; then
     printf "\033]1337;ShellIntegrationVersion=6;shell=zsh\007"
   fi
 fi
+
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line

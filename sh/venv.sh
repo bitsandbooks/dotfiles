@@ -6,8 +6,8 @@ else
 	ENVIRONMENT="venv"
 fi
 
-if [[ -d $ENVIRONMENT ]]; then
+if [[ -f $ENVIRONMENT/bin/activate ]]; then
 	source $ENVIRONMENT/bin/activate
 else
-	echo "No Python virtual environment found in './$ENVIRONMENT'."
+	echo "Python virtual environment activator not found in ./$ENVIRONMENT/bin/activate."
 fi
