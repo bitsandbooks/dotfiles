@@ -95,6 +95,11 @@ function codepoint() {
 autoload -U compinit
 compinit
 
+# load vim mode
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
+
 # Colors for ls
 zstyle ':completion:*' list-colors ''
 
