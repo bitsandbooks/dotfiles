@@ -10,6 +10,7 @@ source $HOME/.dotfiles/sh/vars.sh
 
 # shell-specific vars
 export HISTFILE=$HOME/.zsh_history # History file location
+export HISTORY_IGNORE="(brew *|cd *|curl *|exit|ll|which *|pick)"
 export SAVEHIST=500
 
 # Set the prompt.
