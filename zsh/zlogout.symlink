@@ -1,3 +1,5 @@
 #!/usr/bin/env zsh
 
-# '.zlogout' is sourced when login shells exit. 
+# '.zlogout' is sourced when login shells exit.
+clear
+
