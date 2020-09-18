@@ -91,22 +91,22 @@ function codepoint() {
 
 # Display git status if in a repo.
 function rprompt-git {
-     local name st color
-     name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g"`
-     if [[ -z $name ]]; then
-             return
-     fi
-     st=`git status 2> /dev/null`
-     if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-             color=${fg[green]}
-     elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-             color=${fg[yellow]}
-     elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-             color=${fg_bold[red]}
-     else
-             color=${fg[red]}
-     fi
-     echo "(%{$color%}$name%{$reset_color%})"
+    local name st color
+    name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g"`
+    if [[ -z $name ]]; then
+        return
+    fi
+    st=`git status 2> /dev/null`
+    if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
+        color=${fg[green]}
+    elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
+        color=${fg[yellow]}
+    elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
+        color=${fg_bold[red]}
+    else
+        color=${fg[red]}
+    fi
+    echo "(%{$color%}$name%{$reset_color%})"
 }
 setopt prompt_subst
 
