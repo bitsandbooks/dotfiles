@@ -15,5 +15,5 @@ export SAVEHIST=500
 
 # Set the prompt.
 precmd() { echo "\n" }
-export PROMPT='%F{green}${PWD/#$HOME/~}%f %# '
-export RPROMPT='`rprompt-git` %F{green}%n@%m%f'
+PROMPT='%F{green}${PWD/#$HOME/~}%f %# '
+RPROMPT='`rprompt-git` %F{green}%n@%m%f'

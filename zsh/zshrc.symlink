@@ -90,7 +90,7 @@ function codepoint() {
 }
 
 # Display git status if in a repo.
-function rprompt-git {
+function rprompt-git() {
     local name st color
     name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g"`
     if [[ -z $name ]]; then
