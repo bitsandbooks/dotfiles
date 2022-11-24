@@ -164,7 +164,8 @@ elif [[ -r /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 fi
 
 # use .localrc for SUPER SECRET STUFF that you don't
-# want in your public, versioned repo.
+# want in your public, versioned repo, or for this
+# machine's LOCAL PECULIARITIES.
 if [[ -r $HOME/.localrc ]]; then
     source $HOME/.localrc
 fi
