@@ -143,6 +143,7 @@ cask 'sublime-text' # text editor
 cask 'superduper' # backup app
 cask 'syncthing' # open source file sync tool
 cask 'tailscale' # virtual private network app
+cask 'tower' # Git GUI app
 cask 'transmission-remote-gui' # manage torrents on another machine
 cask 'transmit' # SFTP app
 cask 'ubiquiti-unifi-controller' # UniFi management app
