@@ -6,14 +6,14 @@
 # produce output or assume the shell is attached to a tty.
 
 # import shell-agnostic vars
-source $HOME/.dotfiles/sh/vars.sh
+source $DOTFILES/sh/vars.sh
 
 # shell-specific vars
 export HISTFILE=$HOME/.zsh_history # History file location
-export HISTORY_IGNORE="(brew *|cd *|curl *|exit|ll|which *|pick)"
+export HISTORY_IGNORE="(exit|which *)"
 export SAVEHIST=50000
 
-# Set the prompt.
-precmd() { echo "\n" }
-PROMPT='%F{green}${PWD/#$HOME/~}%f %# '
-RPROMPT='`rprompt-git` %F{green}%n@%m%f'
+# Set the prompt. (Unneeded with oh-my-zsh?)
+# precmd() { echo "\n" }
+# PROMPT='%F{green}${PWD/#$HOME/~}%f %# '
+# RPROMPT=' %F{green}%n@%m%f'

@@ -1,51 +1,158 @@
 #!/usr/bin/env zsh
 
 # There are five startup files that zsh will read commands from:
-# 
+#
 # $ZDOTDIR/.zshenv
 # $ZDOTDIR/.zprofile
 # $ZDOTDIR/.zshrc
 # $ZDOTDIR/.zlogin
 # $ZDOTDIR/.zlogout
-# 
+#
 # If ZDOTDIR is not set, then the value of HOME is used; this is the usual case.
-# 
-# '.zshenv' is sourced on all invocations of the shell, unless the -f option is 
-# set. It should contain commands to set the command search path, plus other 
-# important environment variables. '.zshenv' should not contain commands that 
+#
+# '.zshenv' is sourced on all invocations of the shell, unless the -f option is
+# set. It should contain commands to set the command search path, plus other
+# important environment variables. '.zshenv' should not contain commands that
 # produce output or assume the shell is attached to a tty.
-# 
-# '.zshrc' is sourced in interactive shells. It should contain commands to set 
+#
+# '.zshrc' is sourced in interactive shells. It should contain commands to set
 # up aliases, functions, options, key bindings, etc.
-# 
-# '.zlogin' is sourced in login shells. It should contain commands that should 
-# be executed only in login shells. '.zlogout' is sourced when login shells 
-# exit. '.zprofile' is similar to '.zlogin', except that it is sourced before 
-# '.zshrc'. '.zprofile' is meant as an alternative to '.zlogin' for ksh fans; 
-# the two are not intended to be used together, although this could certainly 
-# be done if desired. '.zlogin' is not the place for alias definitions, 
-# options, environment variable settings, etc.; as a general rule, it should 
-# not change the shell environment at all. Rather, it should be used to set the 
+#
+# '.zlogin' is sourced in login shells. It should contain commands that should
+# be executed only in login shells. '.zlogout' is sourced when login shells
+# exit. '.zprofile' is similar to '.zlogin', except that it is sourced before
+# '.zshrc'. '.zprofile' is meant as an alternative to '.zlogin' for ksh fans;
+# the two are not intended to be used together, although this could certainly
+# be done if desired. '.zlogin' is not the place for alias definitions,
+# options, environment variable settings, etc.; as a general rule, it should
+# not change the shell environment at all. Rather, it should be used to set the
 # terminal type and run a series of external commands (fortune, msgs, etc).
-# 
+#
 # Source: http://zsh.sourceforge.net/Intro/intro_3.html
+#
+# export ZDOTDIR="$HOME"
 
+# Export path to the READ-ONLY copy of Dotfiles. This copy should never be used
+# for making changes, and should merely pull from the repo. If you use the same
+# copy you're working on, you can really confuse the active shell, when it goes
+# to look for things that aren't there anymore because you switched branches.
+# Instead, override this variable manually when testing the dev version.
 export DOTFILES="$HOME/.dotfiles"
 
 # set $OS variable
-if [ `uname` = "Darwin" ]; then
-  export OS="macos"
-elif [ `uname` = "Linux" ]; then
-  export OS="linux"
-else
-  export OS="unknown"
+if [ `uname` = "Darwin" ]; then export OS="macos"
+elif [ `uname` = "Linux" ]; then export OS="linux"
+else export OS="unknown"; fi
+
+### OH MY ZSH
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="bureau"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+## OMZ User configuration
+
+# include Homebrew manpages
+if [[ -d "$HOMEBREW_REPOSITORY/manpages" ]]; then
+  export MANPATH="$HOMEBREW_REPOSITORY/manpages:$MANPATH"
 fi
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
+
+# Compilation flags
+export ARCHFLAGS="-arch $(uname -m)"
+
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### ALIASES
 
 # import platform- and shell-agnostic aliases, then set zsh-specific aliases
-source $DOTFILES/$OS/aliases.sh
 source $DOTFILES/sh/aliases.sh
+source $DOTFILES/$OS/aliases.sh
 alias reloadzsh="source $HOME/.zshrc"
 
 ### FUNCTIONS
@@ -57,9 +164,6 @@ function collapse_pwd {
 
 # Get computer name
 box_name() { hostname -s }
-
-# Create a new directory and enter it
-md() { mkdir -p "$@" && cd "$@" }
 
 # Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
 # Send a fake UA string for sites that sniff it instead of using the
@@ -89,26 +193,26 @@ function codepoint() {
     echo # newline
 }
 
-# Display git status if in a repo.
-function rprompt-git() {
-    local name st color
-    name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g"`
-    if [[ -z $name ]]; then
-        return
-    fi
-    st=`git status 2> /dev/null`
-    if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-        color=${fg[green]}
-    elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-        color=${fg[yellow]}
-    elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-        color=${fg_bold[red]}
-    else
-        color=${fg[red]}
-    fi
-    echo "(%{$color%}$name%{$reset_color%})"
-}
-setopt prompt_subst
+## Display git status if in a repo. (Unneeded with OMZ?)
+# function rprompt-git() {
+#     local name st color
+#     name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g"`
+#     if [[ -z $name ]]; then
+#         return
+#     fi
+#     st=`git status 2> /dev/null`
+#     if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
+#         color=${fg[green]}
+#     elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
+#         color=${fg[yellow]}
+#     elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
+#         color=${fg_bold[red]}
+#     else
+#         color=${fg[red]}
+#     fi
+#     echo "(%{$color%}$name%{$reset_color%})"
+# }
+# setopt prompt_subst
 
 ### OPTIONS
 
@@ -116,10 +220,15 @@ setopt prompt_subst
 autoload -U compinit
 compinit
 
-# load vim mode
+# load vim mode and bind to Ctrl+E
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^E' edit-command-line
+
+# load quote-and-complete and bind to Shift+Tab
+autoload -Uz quote-and-complete-word
+zle -N quote-and-complete-word
+bindkey '^[[Z' quote-and-complete-word
 
 # Colors for ls
 zstyle ':completion:*' list-colors ''
@@ -153,21 +262,19 @@ zle -N newtab
 
 ### KEYBINDINGS
 
-# enable history search using ^R
+# bind history search to Ctrl+R
 bindkey '^R' history-incremental-search-backward
 
-# source zsh-syntax-highlighting
-if [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [[ -r /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [[ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Import zsh-syntax-highlighting
+ZSH_HL_SCRIPT="share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+if [[ -r "/usr/$ZSH_HL_SCRIPT" ]]; then ZSH_HL_FOLDER="/usr"
+elif [[ -r "/usr/local/$ZSH_HL_SCRIPT" ]]; then ZSH_HL_FOLDER="/usr/local"
+elif [[ -r "/opt/homebrew/$ZSH_HL_SCRIPT" ]]; then ZSH_HL_FOLDER="/opt/homebrew"
 fi
+source $ZSH_HL_FOLDER/$ZSH_HL_SCRIPT
+unset ZSH_HL_SCRIPT && unset ZSH_HL_FOLDER
 
 # use .localrc for SUPER SECRET STUFF that you don't
 # want in your public, versioned repo, or for this
 # machine's LOCAL PECULIARITIES.
-if [[ -r $HOME/.localrc ]]; then
-    source $HOME/.localrc
-fi
+if [[ -r $HOME/.localrc ]]; then source $HOME/.localrc; fi
