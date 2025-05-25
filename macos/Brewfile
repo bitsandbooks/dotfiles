@@ -107,6 +107,7 @@ cask 'discord' # chat and game
 cask 'firefox' # open source web browser
 cask 'google-chrome' # web browser that spies on your every move
 cask 'gpg-suite' # manage GNU Privacy Guard keys, signatures, etc.
+cask 'imageoptim' # photo metadata scrubber and compression app
 cask 'inkscape' # graphic design tool
 cask 'iterm2' # better terminal than Terminal.app
 cask 'kdenlive' # video editor
