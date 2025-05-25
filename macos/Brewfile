@@ -1,5 +1,6 @@
 # taps
 tap 'dotenvx/brew' # import environment variables with ease
+tap 'homebrew-ffmpeg/ffmpeg' # more full-featured ffmpeg than default formula
 tap 'sass/sass' # Sassy CSS
 
 # shell completions
@@ -23,13 +24,13 @@ brew 'cmatrix' # Matrix-like terminal waterfall
 brew 'coreutils' # GNU coreutils
 brew 'doctl' # DigitalOcean terminal tool
 brew 'dotenvx/brew/dotenvx' # import environment variables with ease
-brew 'ffmpeg@6' # Swiss Army knife for AV
 brew 'figlet' # Big ASCII words in terminal
 brew 'flac' # open source audio codec
 brew 'gh' # GitHub termainal tool
 brew 'git' # revision control tool
 brew 'go' # programming language
 brew 'highlight' # universal sourcecode to formatted text converter
+brew 'homebrew-ffmpeg/ffmpeg/ffmpeg' # Swiss Army knife for AV
 brew 'htop' # system resource monitor
 brew 'httm' # interactive, file-level Time Machine-like tool for ZFS/Btrfs
 brew 'jq' # Query tool for JSON data
