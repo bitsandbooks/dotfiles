@@ -182,3 +182,14 @@ mas 'Simple Comic', id: 1497435571
 mas 'Windows App', id: 1295203466
 mas 'Xcode', id: 497799835
 mas 'xScope', id: 447661441
+
+# Visual Studio Code extensions
+vscode 'ecmel.vscode-html-css'
+vscode 'kevinrose.vsc-python-indent'
+vscode 'ms-azuretools.vscode-docker'
+vscode 'ms-python.python'
+vscode 'ms-vscode-remote.remote-ssh'
+vscode 'redhat.vscode-yaml'
+vscode 'vscode-icons-team.vscode-icons'
+vscode 'wholroyd.jinja'
+vscode 'yzhang.markdown-all-in-one'
