@@ -64,7 +64,7 @@ brew 'yamllint' # syntax checker for YAML files
 brew 'zsh-syntax-highlighting' # make the terminal pretty
 brew 'zstd' # fast and modern compression algorithm
 
-# fonts
+# cask fonts
 cask 'font-anonymous-pro'
 cask 'font-cantarell'
 cask 'font-cascadia-code'
@@ -93,7 +93,7 @@ cask 'font-sf-pro'
 cask 'font-source-code-pro'
 cask 'font-source-serif-4'
 
-# apps
+# cask apps
 cask '1password' # password manager
 cask '1password-cli' # 1Password terminal tool
 cask 'appzapper' # uninstall apps more completely than just dragging them to the Trash
@@ -159,3 +159,26 @@ cask 'wireshark' # network traffic monitoring app
 cask 'zed' # text edior
 cask 'zoom' # videoconferencing app
 cask 'zotero' # citation management app
+
+# App Store apps
+mas '1Password for Safari', id: 1569813296
+mas 'Bitwarden', id: 1352778147
+mas 'Developer', id: 640199958
+mas 'Equinox', id: 1591510203
+mas 'FileBot', id: 905384638
+mas 'FileShredder', id: 418094085
+mas 'Full Deck Solitaire', id: 412980789
+mas 'GarageBand', id: 682658836
+mas 'GrandPerspective', id: 1111570163
+mas 'iMovie', id: 408981434
+mas 'Keynote', id: 409183694
+mas 'Music Tag Edit', id: 999242964
+mas 'Numbers', id: 409203825
+mas 'OmniFocus', id: 1542143627
+mas 'OmniGraffle', id: 404458553
+mas 'OmniPlan', id: 1040002810
+mas 'Pages', id: 409201541
+mas 'Simple Comic', id: 1497435571
+mas 'Windows App', id: 1295203466
+mas 'Xcode', id: 497799835
+mas 'xScope', id: 447661441
