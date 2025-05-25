@@ -104,6 +104,7 @@ cask 'canva' # graphic design tool
 cask 'chromium' # web browser (Chrome minus Google)
 cask 'db-browser-for-sqlite' # browse SQLite databases
 cask 'discord' # chat and game
+cask 'ea' # EA Games launcher
 cask 'firefox' # open source web browser
 cask 'google-chrome' # web browser that spies on your every move
 cask 'gpg-suite' # manage GNU Privacy Guard keys, signatures, etc.
@@ -123,7 +124,6 @@ cask 'mysqlworkbench' # browse and manage MySQL/MariaDB databases
 cask 'namechanger' # bulk-rename app
 cask 'omnifocus' # task manager
 cask 'openscad' # CAD programming language and renderer
-cask 'origin' # EA Origin
 cask 'plexamp' # audio player for Plex
 cask 'processing' # visualization programming language
 cask 'prusaslicer' # 3D model slicing app
