@@ -158,7 +158,6 @@ cask 'quicklook-json' # Quick Look plugin for JSON files
 cask 'selfcontrol' # block sites using /etc/hosts and a timer
 cask 'sf-symbols' # Apple font extras
 cask 'shift' # separate work and personal accounts
-cask 'sketch' # graphic design app
 cask 'sourcetree' # open source revision control app
 cask 'steam' # games platform
 cask 'sublime-text' # text editor
