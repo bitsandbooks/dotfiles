@@ -117,7 +117,7 @@ ZSH_THEME="bureau"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 ## OMZ User configuration
 
@@ -257,7 +257,7 @@ setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-setopt INC_APPEND_HISTORY        # adds history incrementally and share it across sessions
+setopt INC_APPEND_HISTORY        # Add history incrementally, so it's shared across sessions
 setopt PROMPT_SUBST              # Subject prompt string to expansion
 setopt SHARE_HISTORY             # Share history between all sessions.
 

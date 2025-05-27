@@ -6,7 +6,7 @@
 # produce output or assume the shell is attached to a tty.
 
 # import shell-agnostic vars
-source $DOTFILES/sh/vars.sh
+source ../sh/vars.sh
 
 # shell-specific vars
 export HISTFILE=$HOME/.zsh_history # History file location
