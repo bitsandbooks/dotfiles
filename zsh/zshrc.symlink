@@ -248,8 +248,8 @@ autoload colors && colors
 # Zsh options
 setopt APPEND_HISTORY            # Adds history
 setopt COMPLETE_ALIASES          # Don't expand aliases _before_ completion has finished
-setopt CORRECT                   # Turns on spelling correction for commands
 setopt COMPLETE_IN_WORD          # Set cursor to the end of the word if completion is started
+setopt CORRECT                   # Turns on spelling correction for commands
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
