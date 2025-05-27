@@ -33,6 +33,7 @@
 # export ZDOTDIR="$HOME"
 
 # Load SSH Agent
+echo -n "Starting SSH Agent..."
 eval $(ssh-agent -s -E sha256)
 
 # Export path to the READ-ONLY copy of Dotfiles. This copy should never be used
