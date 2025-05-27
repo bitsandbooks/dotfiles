@@ -2,7 +2,11 @@
 
 A collection of shell scripts and "dotfiles" that I use on my machines.
 
-Copyright © 2025 by Rob Dumas. Licensed under the BSD-3-clause license.
+Copyright © 2025 by Rob Dumas.
+
+## License
+
+BSD-3-Clause
 
 ## Usage
 
