@@ -5,8 +5,10 @@
 # important environment variables. '.zshenv' should not contain commands that
 # produce output or assume the shell is attached to a tty.
 
+export DOTFILES=$HOME/.dotfiles
+
 # import shell-agnostic vars
-source ../sh/vars.sh
+source $DOTFILES/sh/vars.sh
 
 # shell-specific vars
 export HISTFILE=$HOME/.zsh_history # History file location
