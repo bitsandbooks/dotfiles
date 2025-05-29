@@ -24,6 +24,7 @@ brew 'cmatrix' # Matrix-like terminal waterfall
 brew 'coreutils' # GNU coreutils
 brew 'doctl' # DigitalOcean terminal tool
 brew 'dotenvx/brew/dotenvx' # import environment variables with ease
+brew 'exercism' # code education service
 brew 'figlet' # Big ASCII words in terminal
 brew 'flac' # open source audio codec
 brew 'gh' # GitHub termainal tool
