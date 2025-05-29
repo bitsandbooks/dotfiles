@@ -33,6 +33,7 @@ brew 'highlight' # universal sourcecode to formatted text converter
 brew 'homebrew-ffmpeg/ffmpeg/ffmpeg' # Swiss Army knife for AV
 brew 'htop' # system resource monitor
 brew 'httm' # interactive, file-level Time Machine-like tool for ZFS/Btrfs
+brew 'iperf3' # network latency testing tool
 brew 'jq' # Query tool for JSON data
 brew 'keychain' # user-friendly front-end to ssh-agent(1)
 brew 'lolcat' # rainbows and unicorns in your terminal!
