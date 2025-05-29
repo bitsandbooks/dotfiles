@@ -141,6 +141,7 @@ cask 'libreoffice' # open source office suite
 cask 'microsoft-auto-update' # keep Microsoft apps up to date
 cask 'microsoft-edge' # web browser based on Chrome
 cask 'microsoft-office' # office suite
+cask 'mkvtoolnix' # Matroshka video file tool
 cask 'mullvad-browser' # web browser
 cask 'mullvadvpn' # VPN provider
 cask 'musicbrainz-picard' # Music metadata app
