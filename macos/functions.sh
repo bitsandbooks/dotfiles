@@ -6,4 +6,4 @@ function gpg_cache () {
     eval $(op signin) # 2
     op item get $OP_GPG_PASSPHRASE --fields password | /usr/local/MacGPG2/libexec/gpg-preset-passphrase --preset $GPG_KEY_FOR_OP_TO_UNLOCK # 3
 }
-gpg_cache # 4
+# gpg_cache # 4
