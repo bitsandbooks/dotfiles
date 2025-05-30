@@ -29,6 +29,7 @@ brew 'figlet' # Big ASCII words in terminal
 brew 'flac' # open source audio codec
 brew 'gh' # GitHub termainal tool
 brew 'git' # revision control tool
+# brew 'gnupg', link: false # covered by 'gpgsuite' cask
 brew 'go' # programming language
 brew 'highlight' # universal sourcecode to formatted text converter
 brew 'homebrew-ffmpeg/ffmpeg/ffmpeg' # Swiss Army knife for AV
@@ -37,10 +38,13 @@ brew 'httm' # interactive, file-level Time Machine-like tool for ZFS/Btrfs
 brew 'iperf3' # network latency testing tool
 brew 'jq' # Query tool for JSON data
 brew 'keychain' # user-friendly front-end to ssh-agent(1)
+brew 'libbluray' # BD-ROM library
+brew 'libdvdcss' # DVD-ROM library
 brew 'lolcat' # rainbows and unicorns in your terminal!
 brew 'magic-wormhole' # get a file from here to there from the terminal with ease
 brew 'markdown' # lightweight markup language that converts well to HTML
 brew 'mas' # App Store terminal tool
+brew 'md5sha1sum' # generate file hashes
 brew 'mysql-client@8.0' # access MySQL/MariaDB databases
 brew 'nmap' # network tool
 brew 'openssh' # secure shell to remote systems
@@ -61,6 +65,8 @@ brew 'vim' # text editor for the terminal
 brew 'webp' # image format support
 brew 'wget' # HTTP terminal tool
 brew 'wp-cli' # WordPress terminal tool
+brew 'x264' # AV compression algorithm
+brew 'x265' # AV compression algorithm
 brew 'xvid' # AV codec
 brew 'yamllint' # syntax checker for YAML files
 brew 'zsh-syntax-highlighting' # make the terminal pretty
@@ -158,7 +164,7 @@ cask 'qlcolorcode' # Quick Look plugin - renders source code with formatting
 cask 'qlcommonmark' # Quick Look plugin for Markdown files
 cask 'qlmarkdown' # Quick Look plugin for Markdown files
 cask 'qlstephen' # Quick Look plugin for plaintext files without an extension
-cask 'qlvideo' # Quick Look plugin - thumbnails, static previews, cover art and metadata for video files
+cask 'qlvideo' # Quick Look plugin for video files
 cask 'qlzipinfo' # Quick Look plugin for ZIP files
 cask 'quicklook-csv' # Quick Look plugin for CSV files
 cask 'quicklook-json' # Quick Look plugin for JSON files
