@@ -22,7 +22,7 @@ EOF
 do_link() {
   find . -type f -name '*.symlink' -print0 | while IFS= read -r -d '' src; do
     name="$(basename "$src" .symlink)"
-    target="$HOME/$name"
+    target="$HOME/.$name"
     abs_src="$(realpath "$src")"
 
     # Backup existing file or symlink
