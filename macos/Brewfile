@@ -74,6 +74,7 @@ brew 'zstd' # fast and modern compression algorithm
 
 # cask fonts
 cask 'font-anonymous-pro'
+cask 'font-atkinson-hyperlegible'
 cask 'font-bebas-neue'
 cask 'font-cantarell'
 cask 'font-cascadia-code'
