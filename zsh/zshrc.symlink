@@ -161,62 +161,9 @@ alias reloadzsh="source $HOME/.zshrc"
 
 ### FUNCTIONS
 
-# collapse dir if in
-function collapse_pwd {
-    echo $(pwd | sed -e "s,^$HOME,~,")
-}
-
-# Get computer name
-box_name() { hostname -s }
-
-# Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
-# Send a fake UA string for sites that sniff it instead of using the
-# Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
-function httpcompression() {
-    encoding="$(curl -LIs -H 'User-Agent: Mozilla/5 Gecko' -H 'Accept-Encoding: gzip,deflate,compress,sdch' "$1" | grep '^Content-Encoding:')" && echo "$1 is encoded using ${encoding#* }" || echo "$1 is not using any encoding"
-}
-
-# Gzip-enabled `curl`
-function gurl() { curl -sH "Accept-Encoding: gzip" "$@" | gunzip }
-
-# Escape UTF-8 characters into their 3-byte format
-function escape() {
-    printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u)
-    echo # newline
-}
-
-# Decode \x{ABCD}-style Unicode escape sequences
-function unidecode() {
-    perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
-    echo # newline
-}
-
-# Get a character’s Unicode code point
-function codepoint() {
-    perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
-    echo # newline
-}
-
-## Display git status if in a repo. (Unneeded with OMZ?)
-# function rprompt-git() {
-#     local name st color
-#     name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g"`
-#     if [[ -z $name ]]; then
-#         return
-#     fi
-#     st=`git status 2> /dev/null`
-#     if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-#         color=${fg[green]}
-#     elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-#         color=${fg[yellow]}
-#     elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-#         color=${fg_bold[red]}
-#     else
-#         color=${fg[red]}
-#     fi
-#     echo "(%{$color%}$name%{$reset_color%})"
-# }
-# setopt prompt_subst
+# import functions
+source $DOTFILES/sh/functions.sh
+source $DOTFILES/$OS/functions.sh
 
 ### OPTIONS
 
