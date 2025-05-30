@@ -29,7 +29,6 @@ brew 'figlet' # Big ASCII words in terminal
 brew 'flac' # open source audio codec
 brew 'gh' # GitHub termainal tool
 brew 'git' # revision control tool
-# brew 'gnupg', link: false # covered by 'gpgsuite' cask
 brew 'go' # programming language
 brew 'highlight' # universal sourcecode to formatted text converter
 brew 'homebrew-ffmpeg/ffmpeg/ffmpeg' # Swiss Army knife for AV
