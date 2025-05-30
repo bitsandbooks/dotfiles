@@ -60,6 +60,9 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
+# Re-enable slo-mo minimize for windows (hold Shift and click the yellow button)
+defaults write com.apple.dock slow-motion-allowed -bool true
+
 # Use AirDrop over every interface. srsly this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
