@@ -152,6 +152,12 @@ export ARCHFLAGS="-arch $(uname -m)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+### .LOCALRC
+# Use .localrc for SUPER SECRET STUFF that you don't
+# want in your public, versioned repo, or for this
+# machine's LOCAL PECULIARITIES.
+if [[ -r $HOME/.localrc ]]; then source $HOME/.localrc; fi
+
 ### ALIASES
 
 # import platform- and shell-agnostic aliases, then set zsh-specific aliases
@@ -224,8 +230,3 @@ elif [[ -r "/opt/homebrew/$ZSH_HL_SCRIPT" ]]; then ZSH_HL_FOLDER="/opt/homebrew"
 fi
 source $ZSH_HL_FOLDER/$ZSH_HL_SCRIPT
 unset ZSH_HL_SCRIPT && unset ZSH_HL_FOLDER
-
-# use .localrc for SUPER SECRET STUFF that you don't
-# want in your public, versioned repo, or for this
-# machine's LOCAL PECULIARITIES.
-if [[ -r $HOME/.localrc ]]; then source $HOME/.localrc; fi
