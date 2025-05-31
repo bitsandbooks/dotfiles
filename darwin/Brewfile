@@ -59,6 +59,7 @@ brew 'sass/sass/sass' # Sassy CSS stylesheet preprocessor
 brew 'screen' # terminal mutiplexer (terminals inside terminals)
 brew 'sqlite' # lightweight database-like thing
 brew 'theora' # open source audio codec
+brew 'transmission-cli' # cli access to torrent app
 brew 'tree' # list directory trees
 brew 'vim' # text editor for the terminal
 brew 'webp' # image format support
