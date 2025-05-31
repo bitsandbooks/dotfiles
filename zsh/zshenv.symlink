@@ -6,9 +6,11 @@
 # produce output or assume the shell is attached to a tty.
 
 export DOTFILES=$HOME/.dotfiles
+OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
 # import shell-agnostic vars
 source $DOTFILES/sh/vars.sh
+source $DOTFILES/$OS/vars.sh
 
 # shell-specific vars
 export HISTFILE=$HOME/.zsh_history # History file location

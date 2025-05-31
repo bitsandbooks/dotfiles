@@ -44,9 +44,10 @@ eval $(ssh-agent -s -E sha256)
 export DOTFILES="$HOME/.dotfiles"
 
 # set $OS variable
-if [ `uname` = "Darwin" ]; then export OS="macos"
-elif [ `uname` = "Linux" ]; then export OS="linux"
-else export OS="unknown"; fi
+if [ `uname -s` = "Darwin" ] || [ `uname -s` = "Linux" ]; then
+  export OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+else export OS="unknown"
+fi
 
 ### OH MY ZSH
 
