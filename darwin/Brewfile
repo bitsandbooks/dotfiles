@@ -151,7 +151,7 @@ cask 'microsoft-edge' # web browser based on Chrome
 cask 'microsoft-office' # office suite
 cask 'mkvtoolnix' # Matroshka video file tool
 cask 'mullvad-browser' # web browser
-cask 'mullvadvpn' # VPN provider
+cask 'mullvad-vpn' # VPN provider
 cask 'musicbrainz-picard' # Music metadata app
 cask 'mysqlworkbench' # browse and manage MySQL/MariaDB databases
 cask 'namechanger' # bulk-rename app
