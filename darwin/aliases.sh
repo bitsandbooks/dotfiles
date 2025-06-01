@@ -5,3 +5,5 @@ alias brewup="brew bundle --file $DOTFILES/darwin/Brewfile && brew update && bre
 alias o=open
 alias oo='open .'
 alias ls='ls -H'
+alias tmctl=transmission-cli
+alias tmrem=transmission-remote
