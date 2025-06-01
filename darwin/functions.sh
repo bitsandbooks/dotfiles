@@ -7,3 +7,10 @@ function gpg_cache () {
     op item get $OP_GPG_PASSPHRASE --fields password | /usr/local/MacGPG2/libexec/gpg-preset-passphrase --preset $GPG_KEY_FOR_OP_TO_UNLOCK # 3
 }
 # gpg_cache # 4
+
+function brewup () {
+    brew bundle --file $DOTFILES/darwin/Brewfile
+    brew update
+    brew upgrade
+    brew cleanup
+}
