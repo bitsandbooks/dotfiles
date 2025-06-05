@@ -11,6 +11,6 @@ function gpg_cache () {
 function brewup () {
     brew bundle --file $DOTFILES/darwin/Brewfile
     brew update
-    brew upgrade
+    brew upgrade --greedy
     brew cleanup
 }
