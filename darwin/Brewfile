@@ -171,6 +171,7 @@ cask 'qlvideo' # Quick Look plugin for video files
 cask 'qlzipinfo' # Quick Look plugin for ZIP files
 cask 'quicklook-csv' # Quick Look plugin for CSV files
 cask 'quicklook-json' # Quick Look plugin for JSON files
+cask 'raycast' # Spotlight on steroids
 cask 'selfcontrol' # block sites using /etc/hosts and a timer
 cask 'sf-symbols' # Apple font extras
 cask 'shift' # separate work and personal accounts
