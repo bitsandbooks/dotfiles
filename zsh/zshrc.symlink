@@ -33,7 +33,7 @@
 # export ZDOTDIR="$HOME"
 
 # Load SSH Agent
-echo -n "Starting SSH Agent..."
+# echo -n "Starting SSH Agent..."
 eval $(ssh-agent -s -E sha256)
 
 # Export path to the READ-ONLY copy of Dotfiles. This copy should never be used
@@ -117,7 +117,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(1password aliases ansible brew common-aliases copyfile copypath doctl dotenv emoji extract genpass gh git github history isodate iterm2 jsontools jump macos opentofu pep8 pip rsync screen ssh ssh-agent sublime sudo tailscale xcode)
 
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
@@ -217,6 +217,15 @@ setopt PROMPT_SUBST              # Subject prompt string to expansion
 setopt SHARE_HISTORY             # Share history between all sessions.
 
 zle -N newtab
+
+### ZSTYLES
+
+zstyle :omz:plugins:ssh-agent agent-forwarding yes
+zstyle :omz:plugins:ssh-agent ssh-add-args --apple-load-keychain
+zstyle :omz:plugins:ssh-agent lifetime 6h
+zstyle :omz:plugins:ssh-agent helper opswd
+zstyle :omz:plugins:iterm2 shell-integration yes
+zstyle :omz:plugins:keychain agents gpg,ssh
 
 ### KEYBINDINGS
 
