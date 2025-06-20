@@ -240,3 +240,9 @@ elif [[ -r "/opt/homebrew/$ZSH_HL_SCRIPT" ]]; then ZSH_HL_FOLDER="/opt/homebrew"
 fi
 source $ZSH_HL_FOLDER/$ZSH_HL_SCRIPT
 unset ZSH_HL_SCRIPT && unset ZSH_HL_FOLDER
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+ # End Nix

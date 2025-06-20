@@ -45,3 +45,9 @@ complete -cf sudo
 if [[ -f $HOME/.localrc ]]; then source $HOME/.localrc; fi
 
 ### KEYBINDINGS
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
