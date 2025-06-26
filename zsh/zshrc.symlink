@@ -32,10 +32,6 @@
 #
 # export ZDOTDIR="$HOME"
 
-# Load SSH Agent
-# echo -n "Starting SSH Agent..."
-eval $(ssh-agent -s -E sha256)
-
 # Export path to the READ-ONLY copy of Dotfiles. This copy should never be used
 # for making changes, and should merely pull from the repo. If you use the same
 # copy you're working on, you can really confuse the active shell, when it goes
@@ -171,6 +167,9 @@ alias reloadzsh="source $HOME/.zshrc"
 # import functions
 source $DOTFILES/sh/functions.sh
 source $DOTFILES/$OS/functions.sh
+
+### LOAD GPG AGENT (FUNCTION)
+start_ssh_agent
 
 ### OPTIONS
 
