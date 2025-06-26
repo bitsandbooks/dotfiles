@@ -154,7 +154,7 @@ cask 'libreoffice' # open source office suite
 cask 'microsoft-auto-update' # keep Microsoft apps up to date
 cask 'microsoft-edge' # web browser based on Chrome
 cask 'microsoft-office' # office suite
-cask 'mkvtoolnix' # Matroshka video file tool
+cask 'mkvtoolnix-app' # Matroshka video file tool
 cask 'mullvad-browser' # web browser
 cask 'mullvad-vpn' # VPN provider
 cask 'musicbrainz-picard' # Music metadata app
@@ -181,8 +181,8 @@ cask 'sourcetree' # open source revision control app
 cask 'steam' # games platform
 cask 'sublime-text' # text editor
 cask 'superduper' # backup app
-cask 'syncthing' # open source file sync tool
-cask 'tailscale' # virtual private network app
+cask 'syncthing-app' # open source file sync tool
+cask 'tailscale-app' # virtual private network app
 cask 'tower' # Git GUI app
 cask 'transmission-remote-gui' # manage torrents on another machine
 cask 'transmit' # SFTP app
@@ -193,7 +193,7 @@ cask 'visual-studio-code' # text editor
 cask 'vivaldi' # web browser
 cask 'vlc' # VideoLan AV player
 cask 'vnc-viewer' # connect to remote VNC sessions
-cask 'wireshark' # network traffic monitoring app
+cask 'wireshark-app' # network traffic monitoring app
 cask 'zed' # text edior
 cask 'zoom' # videoconferencing app
 cask 'zotero' # citation management app
