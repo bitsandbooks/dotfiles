@@ -68,6 +68,7 @@ brew 'tree' # list directory trees
 brew 'vim' # text editor for the terminal
 brew 'webp' # image format support
 brew 'wget' # HTTP terminal tool
+brew 'wifi-password' # get Wi-fi passwords in the terminal
 brew 'wp-cli' # WordPress terminal tool
 brew 'x264' # AV compression algorithm
 brew 'x265' # AV compression algorithm
