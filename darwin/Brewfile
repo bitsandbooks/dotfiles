@@ -17,6 +17,7 @@ brew 'zsh-completions'
 brew 'ansible' # infrastructure as code tool
 brew 'ansible-lint' # syntax checker for ansible
 brew 'asciinema' # record and share terminal sessions, "the right way"
+brew 'ata' # Ask the terminal anything (ChatGPT-powered)
 brew 'bitwarden-cli' # Bitwarden password manager terminal tool
 brew 'btop' # system resource monitor for power users
 brew 'caddy' # web server
