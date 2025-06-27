@@ -1,5 +1,17 @@
 #!/usr/bin/env sh
 
+# Update everything
+function upall() {
+  if [ -f "/usr/bin/apt" ]; then
+    sudo apt update && sudo apt upgrade
+  elif [ -f "/usr/bin/dnf" ]; then
+    sudo dnf update
+  fi
+  if [ -f "/usr/bin/flatpak" ]; then sudo flatpak update; fi
+  if [ -f "/usr/bin/snap" ]; then sudo snap refresh --color=auto --unicode=auto; fi
+  echo "Done running updates."
+}
+
 # Reusable SSH Agent
 function start_ssh_agent() {
   local agent_info_file="$HOME/.ssh/agent.env"
