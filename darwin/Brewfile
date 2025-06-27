@@ -41,6 +41,7 @@ brew 'libbluray' # BD-ROM library
 brew 'libdvdcss' # DVD-ROM library
 brew 'lolcat' # rainbows and unicorns in your terminal!
 brew 'magic-wormhole' # get a file from here to there from the terminal with ease
+brew 'mailsy' # generate disposable email addresses with ease
 brew 'markdown' # lightweight markup language that converts well to HTML
 brew 'mas' # App Store terminal tool
 brew 'md5sha1sum' # generate file hashes
