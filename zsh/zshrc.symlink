@@ -170,6 +170,7 @@ source $DOTFILES/$OS/functions.sh
 
 ### LOAD GPG AGENT (FUNCTION)
 start_ssh_agent
+source "$HOME/.ssh/agent.env"
 
 ### OPTIONS
 
