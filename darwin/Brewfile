@@ -59,6 +59,7 @@ brew 'restic' # backup tool
 brew 'rsync' # send and receive files between folders or machines
 brew 'sass/sass/sass' # Sassy CSS stylesheet preprocessor
 brew 'screen' # terminal mutiplexer (terminals inside terminals)
+brew 'speedtest-cli' # test network speed
 brew 'sqlite' # lightweight database-like thing
 brew 'theora' # open source audio codec
 brew 'transmission-cli' # cli access to torrent app
