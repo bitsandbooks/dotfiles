@@ -23,6 +23,7 @@ brew 'btop' # system resource monitor for power users
 brew 'caddy' # web server
 brew 'cmatrix' # Matrix-like terminal waterfall
 brew 'coreutils' # GNU coreutils
+brew 'docker' # container tool (CLI only)
 brew 'doctl' # DigitalOcean terminal tool
 brew 'dotenvx/brew/dotenvx' # import environment variables with ease
 brew 'exercism' # code education service
