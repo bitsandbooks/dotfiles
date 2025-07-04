@@ -48,11 +48,11 @@ brew 'markdown' # lightweight markup language that converts well to HTML
 brew 'mas' # App Store terminal tool
 brew 'md5sha1sum' # generate file hashes
 brew 'minio-mc' # CLI interface to MinIO object store
-brew 'mpv' #open-source media player
+brew 'mpv' # open-source media player
 brew 'mysql-client@8.0' # access MySQL/MariaDB databases
 brew 'nmap' # network tool
 brew 'openssh' # secure shell to remote systems
-brew 'opentofu' # open source infrastructure as code tool
+brew 'opentofu' # open source infrastructure-as-code tool
 brew 'osxutils' # collection of macOS terminal tools
 brew 'pyenv' # manage Python versions and packages
 brew 'python-setuptools' # easily download, build, install and remove Python packages
