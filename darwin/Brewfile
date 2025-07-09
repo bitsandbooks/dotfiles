@@ -36,6 +36,7 @@ brew 'highlight' # universal sourcecode to formatted text converter
 brew 'homebrew-ffmpeg/ffmpeg/ffmpeg' # Swiss Army knife for AV
 brew 'htop' # system resource monitor
 brew 'httm' # interactive, file-level Time Machine-like tool for ZFS/Btrfs
+brew 'hugo' # static site generator
 brew 'imagemagick' # image converter
 brew 'iperf3' # network latency testing tool
 brew 'jq' # Query tool for JSON data
