@@ -170,6 +170,7 @@ cask 'mullvad-vpn' # VPN provider
 cask 'musicbrainz-picard' # Music metadata app
 cask 'mysqlworkbench' # browse and manage MySQL/MariaDB databases
 cask 'namechanger' # bulk-rename app
+cask 'obs' # Open Broadcaster Software studio
 cask 'omnifocus' # task manager
 cask 'openscad' # CAD programming language and renderer
 cask 'plexamp' # audio player for Plex
