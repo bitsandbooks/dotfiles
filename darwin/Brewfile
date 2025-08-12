@@ -155,6 +155,7 @@ cask 'gog-galaxy' # games platform
 cask 'google-chrome' # web browser that spies on your every move
 cask 'google-drive' # cloud file storage
 cask 'gpg-suite' # manage GNU Privacy Guard keys, signatures, etc.
+cask 'handbrake-app' # A/V transcoder
 cask 'imageoptim' # photo metadata scrubber and compression app
 cask 'inkscape' # graphic design tool
 cask 'iterm2' # better terminal than Terminal.app
