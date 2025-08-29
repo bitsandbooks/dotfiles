@@ -113,7 +113,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(1password aliases ansible brew common-aliases copyfile copypath doctl dotenv emoji extract genpass gh git github history isodate iterm2 jsontools jump macos opentofu pep8 pip rsync screen ssh ssh-agent sublime sudo tailscale xcode)
+plugins=(1password aliases ansible brew common-aliases copyfile copypath doctl dotenv emoji extract genpass gh git github history isodate iterm2 jsontools jump macos opentofu pep8 pip rsync screen ssh ssh-agent sublime sudo tailscale virtualenv xcode)
 
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
