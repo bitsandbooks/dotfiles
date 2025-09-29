@@ -144,7 +144,6 @@ cask '1password' # password manager
 cask '1password-cli' # 1Password terminal tool
 cask 'appzapper' # uninstall apps more completely than just dragging them to the Trash
 cask 'arduino-ide' # IDE for the popular microcontroller family
-cask 'autodesk-fusion' # CAD/CAM
 cask 'balenaetcher' # burn disk images to USB thumb drives
 cask 'bricklink-studio' # build, render and create LEGO instructions
 cask 'canva' # graphic design tool
