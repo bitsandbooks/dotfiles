@@ -30,7 +30,7 @@ brew 'dotenvx/brew/dotenvx' # import environment variables with ease
 brew 'exercism' # code education service
 brew 'figlet' # Big ASCII words in terminal
 brew 'flac' # open source audio codec
-brew 'gh' # GitHub termainal tool
+brew 'gh' # GitHub terminal tool
 brew 'git' # revision control tool
 brew 'go' # programming language
 brew 'hashicorp/tap/packer' # create custom 'golden images'
@@ -68,6 +68,7 @@ brew 'sass/sass/sass' # Sassy CSS stylesheet preprocessor
 brew 'screen' # terminal mutiplexer (terminals inside terminals)
 brew 'speedtest-cli' # test network speed
 brew 'sqlite' # lightweight database-like thing
+brew 'telnet' # terminal tool for pre-SSH machines
 brew 'theora' # open source audio codec
 brew 'transmission-cli' # cli access to torrent app
 brew 'tree' # list directory trees
