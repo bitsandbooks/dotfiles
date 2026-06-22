@@ -2,7 +2,6 @@
 tap 'dotenvx/brew' # import environment variables with ease
 tap 'hashicorp/tap' # hashicorp tools
 tap 'homebrew-ffmpeg/ffmpeg' # more full-featured ffmpeg than default formula
-tap 'sass/sass' # Sassy CSS
 
 # shell completions
 brew 'bash-completion'
@@ -64,7 +63,6 @@ brew 'python@3.12' # programming language
 brew 'qrencode' # generate QR codes
 brew 'restic' # backup tool
 brew 'rsync' # send and receive files between folders or machines
-brew 'sass/sass/sass' # Sassy CSS stylesheet preprocessor
 brew 'screen' # terminal mutiplexer (terminals inside terminals)
 brew 'speedtest-cli' # test network speed
 brew 'sqlite' # lightweight database-like thing
