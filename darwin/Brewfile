@@ -8,7 +8,6 @@ tap 'sass/sass' # Sassy CSS
 brew 'bash-completion'
 brew 'brew-cask-completion'
 brew 'django-completion'
-brew 'launchctl-completion'
 brew 'open-completion'
 brew 'pip-completion'
 brew 'wp-cli-completion'
