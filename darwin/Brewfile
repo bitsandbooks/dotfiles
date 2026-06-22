@@ -177,6 +177,7 @@ cask 'omnifocus' # task manager
 cask 'openscad' # CAD programming language and renderer
 cask 'plexamp' # audio player for Plex
 cask 'processing' # visualization programming language
+cask 'proton-mail' # secure email service
 cask 'prusaslicer' # 3D model slicing app
 cask 'qlcolorcode' # Quick Look plugin - renders source code with formatting
 cask 'qlcommonmark' # Quick Look plugin for Markdown files
