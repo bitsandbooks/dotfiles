@@ -1,0 +1,82 @@
+graph TD
+    %% Main Entry Points
+    bashrc[.bashrc]
+    zshrc[.zshrc]
+    dotfiles[dotfiles.sh]
+
+    %% Platform-Specific Directories
+    subgraph OS_Linux["Linux Platform"]
+        direction TB
+        linux_vars[linux/vars.sh]
+        linux_aliases[linux/aliases.sh]
+        linux_funcs[linux/functions.sh]
+    end
+
+    subgraph OS_Darwin["macOS Platform"]
+        direction TB
+        darwin_vars[darwin/vars.sh]
+        darwin_aliases[darwin/aliases.sh]
+        darwin_funcs[darwin/functions.sh]
+        darwin_defaults[darwin/defaults.sh]
+        darwin_init[darwin/init.sh]
+    end
+
+    subgraph OS_Unknown["Unknown Platform"]
+        direction TB
+        unknown_vars[unknown/vars.sh]
+        unknown_aliases[unknown/aliases.sh]
+    end
+
+    subgraph Shell_Central["Shell Configuration (sh/)"]
+        direction TB
+        sh_vars[sh/vars.sh]
+        sh_aliases[sh/aliases.sh]
+        sh_funcs[sh/functions.sh]
+        sh_venv[sh/venv.sh]
+        sh_services[sh/services-status.sh]
+    end
+
+    subgraph Vim["Vim Configuration"]
+        direction TB
+        vimrc[vim/vimrc]
+        gvimrc[vim/gvimrc]
+    end
+
+    %% Import Relationships
+    bashrc -->|source| linux_vars
+    bashrc -->|source| sh_vars
+    bashrc -->|source| linux_aliases
+    bashrc -->|source| sh_aliases
+    bashrc -->|source| linux_funcs
+    bashrc -->|source| sh_funcs
+
+    zshrc -->|source| darwin_vars
+    zshrc -->|source| darwin_aliases
+    zshrc -->|source| darwin_funcs
+    zshrc -->|source| darwin_defaults
+    zshrc -->|source| darwin_init
+
+    darwin_init -->|source| darwin_aliases
+
+    %% Environment Variables
+    sh_vars -->|sets| EDITOR
+    sh_vars -->|sets| LESS
+    sh_vars -->|sets| PATH
+    sh_vars -->|sets| PROJECTS
+    sh_vars -->|sets| VISUAL
+    sh_vars -->|sets| VIM
+    sh_vars -->|sets| HISTSIZE
+    sh_vars -->|sets| HISTFILESIZE
+    sh_vars -->|sets| HISTCONTROL
+    sh_vars -->|sets| HISTIGNORE
+    darwin_vars -->|sets| ANSIBLE_CONFIG
+    darwin_vars -->|sets| GIT_PAGER
+    darwin_vars -->|sets| PATH
+    darwin_vars -->|sets| DOTFILES
+    linux_vars -->|sets| GIT_PAGER
+    linux_vars -->|sets| LESS
+    linux_vars -->|sets| SYSTEMD_PAGER
+
+    %% Vim Configuration
+    vimrc -->|configures| vim
+    gvimrc -->|configures| vim
