@@ -58,8 +58,9 @@ brew 'openssh' # secure shell to remote systems
 brew 'opentofu' # open source infrastructure-as-code tool
 brew 'osxutils' # collection of macOS terminal tools
 brew 'pyenv' # manage Python versions and packages
-brew 'python-setuptools' # easily download, build, install and remove Python packages
+brew 'pygments' # syntax highlighter for source code and the shell (pygmentize augments oh-my-zsh)
 brew 'python@3.12' # programming language
+brew 'python-setuptools' # easily download, build, install and remove Python packages
 brew 'qrencode' # generate QR codes
 brew 'restic' # backup tool
 brew 'rsync' # send and receive files between folders or machines
